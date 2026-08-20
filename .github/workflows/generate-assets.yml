@@ -1,0 +1,61 @@
+name: Daily Profile Assets & Telemetry Engine
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/**'
+      - 'profile-3d-contrib/**'
+      - 'README.md'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render Matrix SVGs & Sync Telemetry
+        run: |
+          python3 scripts/render_matrix_svg.py
+          python3 scripts/update_telemetry.py
+
+      - name: Generate Contribution Grid Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/svgs/github-contribution-grid-snake.svg
+            assets/svgs/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2300FFD1&color_dots=%23161b22,%230e4429,%23006d32,%2326a641,%2339d353
+
+      - name: Generate 3D Contribution Graph
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit and Push All Assets
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/ profile-3d-contrib/
+          if git diff --staged --quiet; then
+            echo "All assets up to date, nothing to commit."
+          else
+            git commit -m "chore(telemetry): update profile SVGs, snake animation and 3D graph [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          fi
