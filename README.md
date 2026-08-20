@@ -1,28 +1,28 @@
 <div align="center">
 
-<!-- ======================= DYNAMIC HERO BANNER ======================= -->
+<!-- ======================= PROCEDURAL CYBERPUNK HUD HEADER ======================= -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,20&height=220&section=header&text=Ju1iaN-Zhang&fontSize=48&fontAlignY=38&animation=twinkling&desc=SYSTEMS%20ENGINEER%20%7C%20DISTRIBUTED%20ARCHITECTURE&descAlignY=62&descAlign=50">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,20&height=220&section=header&text=Ju1iaN-Zhang&fontSize=48&fontAlignY=38&animation=twinkling&desc=SYSTEMS%20ENGINEER%20%7C%20DISTRIBUTED%20ARCHITECTURE&descAlignY=62&descAlign=50" width="100%" alt="Header Banner"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/cyber-header.svg">
+  <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/cyber-header.svg" width="100%" alt="Cyberpunk HUD Header" />
 </picture>
 
-<!-- ======================= DYNAMIC TERMINAL TYPING ======================= -->
+<!-- ======================= DYNAMIC MONOSPACE TYPING EFFECT ======================= -->
 <p align="center">
   <a href="https://github.com/Ju1iaN-Zhang">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&duration=2600&pause=1000&color=00FFD1&center=true&vCenter=true&multiline=true&width=720&height=80&lines=printf(%22%25s%5Cn%22%2C%20%22%E7%9C%8B%E8%BF%87%E6%9C%80%E5%A5%BD%E7%9A%84%E6%89%8D%E8%83%BD%E6%9B%B4%E9%80%9A%E9%80%8F%22)%3B;const%20focus%20%3D%20%5B'High-Concurrency'%2C%20'Zero-Dependency'%2C%20'AI%20Workflows'%5D%3B;runtime.init(%7B%20status%3A%20'ONLINE'%2C%20integrity%3A%20'100%25'%20%7D)%3B" alt="Terminal Typing Animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=2600&pause=1000&color=00FFD1&center=true&vCenter=true&multiline=true&width=720&height=75&lines=printf(%22%25s%5Cn%22%2C%20%22%E7%9C%8B%E8%BF%87%E6%9C%80%E5%A5%BD%E7%9A%84%E6%89%8D%E8%83%BD%E6%9B%B4%E9%80%9A%E9%80%8F%22)%3B;const%20focus%20%3D%20%5B'High-Concurrency'%2C%20'Zero-Dependency'%2C%20'AI%20Workflows'%5D%3B;runtime.init(%7B%20status%3A%20'ONLINE'%2C%20integrity%3A%20'100%25'%20%7D)%3B" alt="Terminal Typing Animation" />
   </a>
 </p>
 
-<!-- ======================= LIVE STATUS BADGES ======================= -->
+<!-- ======================= SYSTEM TELEMETRY BADGES ======================= -->
 <p align="center">
   <a href="https://github.com/Ju1iaN-Zhang">
-    <img src="https://img.shields.io/badge/NODE-PRIMARY_INSTANCE-00FFD1?style=for-the-badge&logo=gnubash&logoColor=00FFD1&labelColor=0d1117&color=161b22" alt="Node Status" />
+    <img src="https://img.shields.io/badge/NODE-PRIMARY_INSTANCE-00FFD1?style=for-the-badge&logo=gnubash&logoColor=00FFD1&labelColor=0d1117&color=161b22" alt="Node Instance" />
   </a>
   <a href="https://github.com/Ju1iaN-Zhang?tab=repositories">
-    <img src="https://img.shields.io/badge/ENVIRONMENT-MACOS_%2F_LINUX-00E5FF?style=for-the-badge&logo=apple&logoColor=00E5FF&labelColor=0d1117&color=161b22" alt="Environment" />
+    <img src="https://img.shields.io/badge/ENVIRONMENT-MACOS_%2F_LINUX-00E5FF?style=for-the-badge&logo=apple&logoColor=00E5FF&labelColor=0d1117&color=161b22" alt="Runtime Environment" />
   </a>
   <a href="mailto:julian.devovo@gmail.com">
-    <img src="https://img.shields.io/badge/STATUS-DISPATCHING-10B981?style=for-the-badge&logo=statuspal&logoColor=10B981&labelColor=0d1117&color=161b22" alt="Availability" />
+    <img src="https://img.shields.io/badge/STATUS-DISPATCHING-10B981?style=for-the-badge&logo=statuspal&logoColor=10B981&labelColor=0d1117&color=161b22" alt="System Status" />
   </a>
 </p>
 
@@ -30,10 +30,19 @@
 
 ---
 
-### <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/powershell.svg" width="20" height="20" /> SYSTEM ARCHITECTURE & TELEMETRY
+### <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/diagramsdotnet.svg" width="20" height="20" /> SYSTEM ARCHITECTURE & TOPOLOGY RADAR
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/matrix-radar.svg">
+    <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/matrix-radar.svg" width="100%" alt="System Architecture Topology" />
+  </picture>
+</div>
+
+<br/>
 
 <details open>
-<summary><strong><code>$ cat /proc/sys/developer_manifest.yaml</code></strong> <em>(Click to fold / unfold inspector)</em></summary>
+<summary><strong><code>$ cat /proc/sys/developer_manifest.yaml</code></strong> <em>(Click to fold / unfold console telemetry)</em></summary>
 
 ```yaml
 system_spec:
@@ -65,7 +74,7 @@ telemetry:
   <thead>
     <tr>
       <th align="center"><strong>Domain</strong></th>
-      <th align="center"><strong>Interactive Matrix (Click to inspect documentation)</strong></th>
+      <th align="center"><strong>Interactive Matrix (Click badges to inspect official documentation)</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -127,8 +136,8 @@ telemetry:
         <p><strong>Architecture:</strong> Go + SQLite Embedded</p>
         <p>Zero-dependency, single-binary cashier & point-of-sale system engineered for high stability in retail and small/medium store environments.</p>
         <p>
-          <a href="https://github.com/Ju1iaN-Zhang/POS_System/network/members"><img src="https://img.shields.io/github/forks/Ju1iaN-Zhang/POS_System?style=flat-square&color=00FFD1&labelColor=0d1117" alt="Forks"/></a>
-          <a href="https://github.com/Ju1iaN-Zhang/POS_System/stargazers"><img src="https://img.shields.io/github/stars/Ju1iaN-Zhang/POS_System?style=flat-square&color=00FFD1&labelColor=0d1117" alt="Stars"/></a>
+          <a href="https://github.com/Ju1iaN-Zhang/POS_System"><img src="https://img.shields.io/badge/Language-Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"/></a>
+          <a href="https://github.com/Ju1iaN-Zhang/POS_System"><img src="https://img.shields.io/badge/Database-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"/></a>
           <a href="https://github.com/Ju1iaN-Zhang/POS_System"><img src="https://img.shields.io/badge/Branch-POS--Lite-blue?style=flat-square&labelColor=0d1117" alt="Branch"/></a>
         </p>
       </div>
@@ -136,11 +145,11 @@ telemetry:
     <td width="50%" valign="top">
       <div align="left">
         <h3><a href="https://github.com/Ju1iaN-Zhang/Ju1iaN-Zhang"><code>Ju1iaN-Zhang</code></a></h3>
-        <p><strong>Architecture:</strong> Vector SVG & Markdown Automation</p>
-        <p>Dynamic configuration profile repository rendering real-time developer metrics and telemetry for the GitHub ecosystem.</p>
+        <p><strong>Architecture:</strong> Vector SVG & CI/CD Telemetry Suite</p>
+        <p>Dynamic automated configuration repository generating procedural cyberpunk HUD assets and real-time developer metrics.</p>
         <p>
           <a href="https://github.com/Ju1iaN-Zhang/Ju1iaN-Zhang"><img src="https://img.shields.io/badge/Status-Active-10B981?style=flat-square&labelColor=0d1117" alt="Status"/></a>
-          <a href="https://github.com/Ju1iaN-Zhang/Ju1iaN-Zhang"><img src="https://img.shields.io/badge/Type-Config_Matrix-8b949e?style=flat-square&labelColor=0d1117" alt="Type"/></a>
+          <a href="https://github.com/Ju1iaN-Zhang/Ju1iaN-Zhang"><img src="https://img.shields.io/badge/Automation-GitHub_Actions-2088FF?style=flat-square&labelColor=0d1117" alt="Automation"/></a>
         </p>
       </div>
     </td>
@@ -155,24 +164,29 @@ telemetry:
 
 <div align="center">
 
+<!-- RETRO SNAKE CONTRIBUTION ANIMATION -->
+<p><strong>// REAL-TIME CONTRIBUTION GRID ANIMATION</strong></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/github-contribution-grid-snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake" width="100%" />
+</picture>
+
+<br/><br/>
+
+<!-- PROCEDURAL VECTOR STATS & ACTIVITY -->
 <table border="0">
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/Ju1iaN-Zhang">
-        <img src="https://github-readme-stats.vercel.app/api?username=Ju1iaN-Zhang&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFD1&icon_color=00FFD1&text_color=c9d1d9" alt="GitHub Stats" width="100%" />
-      </a>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/github-stats.svg">
+        <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/github-stats.svg" alt="GitHub Stats" width="100%" />
+      </picture>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/Ju1iaN-Zhang">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ju1iaN-Zhang&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFD1&text_color=c9d1d9" alt="Top Languages" width="100%" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <a href="https://github.com/Ju1iaN-Zhang">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=Ju1iaN-Zhang&theme=tokyonight&hide_border=true&background=0d1117&ring=00FFD1&fire=00FFD1&currStreakLabel=00FFD1&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak" width="100%" />
-      </a>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/top-languages.svg">
+        <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/top-languages.svg" alt="Top Languages" width="100%" />
+      </picture>
     </td>
   </tr>
   <tr>
@@ -202,8 +216,8 @@ telemetry:
 <br/><br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,20&height=100&section=footer">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,20&height=100&section=footer" width="100%" alt="Footer Banner"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/circuit-divider.svg">
+  <img src="https://raw.githubusercontent.com/Ju1iaN-Zhang/Ju1iaN-Zhang/main/assets/svgs/circuit-divider.svg" width="100%" alt="Circuit Divider"/>
 </picture>
 
 </div>

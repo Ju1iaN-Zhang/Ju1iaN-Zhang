@@ -1,0 +1,39 @@
+name: Telemetry Sync and SVG Render
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render Matrix SVGs & Sync Telemetry
+        run: |
+          python3 scripts/render_matrix_svg.py
+          python3 scripts/update_telemetry.py
+          python3 scripts/validate_profile.py
+
+      - name: Commit and Push Telemetry Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/
+          if git diff --staged --quiet; then
+            echo "Telemetry is up to date."
+          else
+            git commit -m "chore(telemetry): update system metrics and procedural SVGs [skip ci]"
+            git push
+          fi

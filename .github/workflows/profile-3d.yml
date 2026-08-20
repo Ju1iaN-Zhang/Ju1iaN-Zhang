@@ -1,0 +1,36 @@
+name: Generate 3D Contribution Profile
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate 3D Contribution Graph
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit and Push 3D Assets
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add profile-3d-contrib/
+          if git diff --staged --quiet; then
+            echo "No changes in 3D profile assets."
+          else
+            git commit -m "chore(telemetry): auto-render 3D isometric contribution graph [skip ci]"
+            git push
+          fi

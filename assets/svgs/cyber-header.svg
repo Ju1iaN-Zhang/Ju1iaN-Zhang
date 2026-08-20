@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#0D111A" />
+      <stop offset="100%" stop-color="#05080F" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFD1" />
+      <stop offset="100%" stop-color="#0088FF" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#162238" stroke-width="0.5" />
+    </pattern>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .terminal-title {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Segoe UI', monospace;
+      font-size: 26px;
+      font-weight: 700;
+      fill: #00FFD1;
+      letter-spacing: 2px;
+    }
+    .terminal-sub {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Segoe UI', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      fill: #8B949E;
+      letter-spacing: 1.5px;
+    }
+    .hud-label {
+      font-family: 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      fill: #00E5FF;
+      letter-spacing: 1px;
+    }
+    .pulse-dot {
+      animation: pulseAnim 2s infinite ease-in-out;
+    }
+    .scan-beam {
+      animation: scanAnim 4s infinite linear;
+    }
+    .dash-flow {
+      stroke-dasharray: 6, 6;
+      animation: dashFlow 20s infinite linear;
+    }
+    @keyframes pulseAnim {
+      0%, 100% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 4px #00FFD1); }
+    }
+    @keyframes scanAnim {
+      0% { transform: translateY(-10px); opacity: 0; }
+      15% { opacity: 0.8; }
+      85% { opacity: 0.8; }
+      100% { transform: translateY(190px); opacity: 0; }
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -1000; }
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="850" height="180" rx="10" fill="url(#bgGrad)" stroke="#1F2E47" stroke-width="1.2" />
+  <rect width="850" height="180" rx="10" fill="url(#grid)" opacity="0.6" />
+
+  <!-- Animated Scan Beam -->
+  <line x1="10" y1="0" x2="840" y2="0" stroke="url(#cyanGrad)" stroke-width="1" opacity="0.4" class="scan-beam" />
+
+  <!-- HUD Corner Brackets -->
+  <path d="M 15 30 L 15 15 L 30 15" fill="none" stroke="#00FFD1" stroke-width="1.8" />
+  <path d="M 835 30 L 835 15 L 820 15" fill="none" stroke="#00FFD1" stroke-width="1.8" />
+  <path d="M 15 150 L 15 165 L 30 165" fill="none" stroke="#00FFD1" stroke-width="1.8" />
+  <path d="M 835 150 L 835 165 L 820 165" fill="none" stroke="#00FFD1" stroke-width="1.8" />
+
+  <!-- Top Status Indicators -->
+  <circle cx="35" cy="35" r="4" fill="#00FFD1" class="pulse-dot" />
+  <text x="46" y="38" class="hud-label">SYSTEM_ONLINE :: NODE.Ju1iaN-Zhang</text>
+  <text x="730" y="38" class="hud-label" fill="#8B949E">LOC: US / ASIA</text>
+
+  <!-- Circuit Trace Line -->
+  <path d="M 35 48 L 815 48" fill="none" stroke="#162238" stroke-width="1" />
+  <path d="M 35 48 L 300 48" fill="none" stroke="url(#cyanGrad)" stroke-width="1.2" class="dash-flow" />
+
+  <!-- Main Title & Callout -->
+  <text x="45" y="94" class="terminal-title" filter="url(#subtleGlow)">Ju1iaN-Zhang // CORE</text>
+  <text x="45" y="120" class="terminal-sub">SYSTEMS ARCHITECTURE &#8226; ZERO-DEPENDENCY INFRASTRUCTURE &#8226; AI WORKFLOWS</text>
+
+  <!-- Bottom Telemetry Chips -->
+  <g transform="translate(45, 140)">
+    <rect width="160" height="22" rx="4" fill="#0E1624" stroke="#1E2F4A" stroke-width="1" />
+    <circle cx="10" cy="11" r="3" fill="#10B981" />
+    <text x="20" y="14" font-family="'Fira Code', monospace" font-size="9" fill="#00FFD1" font-weight="600">STABILITY: OPTIMAL</text>
+
+    <rect x="170" width="180" height="22" rx="4" fill="#0E1624" stroke="#1E2F4A" stroke-width="1" />
+    <circle cx="180" cy="11" r="3" fill="#00E5FF" />
+    <text x="190" y="14" font-family="'Fira Code', monospace" font-size="9" fill="#00E5FF" font-weight="600">RUNTIME: GO / RUST / PY</text>
+
+    <rect x="360" width="200" height="22" rx="4" fill="#0E1624" stroke="#1E2F4A" stroke-width="1" />
+    <circle cx="370" cy="11" r="3" fill="#8B5CF6" />
+    <text x="380" y="14" font-family="'Fira Code', monospace" font-size="9" fill="#C4B5FD" font-weight="600">STATUS: ACTIVE DISPATCH</text>
+  </g>
+
+  <!-- Right Side Cyber Emblem -->
+  <g transform="translate(740, 75)">
+    <polygon points="30,0 60,17 60,52 30,70 0,52 0,17" fill="#0D1626" stroke="#00FFD1" stroke-width="1.5" />
+    <circle cx="30" cy="35" r="12" fill="none" stroke="#0088FF" stroke-width="1.2" class="dash-flow" />
+    <circle cx="30" cy="35" r="4" fill="#00FFD1" />
+  </g>
+</svg>
